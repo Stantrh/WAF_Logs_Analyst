@@ -87,12 +87,25 @@ On peut voir que le fichier est bien apparu dans le dossier [results/](results/)
 
 # Problèmes
 
+### SSL Certificate
+
 Il se peut que vous rencontriez un problème si vous essayez de lancer le programme en possèdant un proxy. Une erreur en lien avec la vérification du certificat SSL retourné par Azure aura lieu et la connexion à Azure ne pourra pas se faire, ainsi, l'analyse des logs est impossible car une requête à AzureMonitor s'avère impossible.
 
 **Erreur de type :** `EnvironmentCredential: Authentication failed: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1006)`
 
-**Erreur de type :** `Attempted credentials: EnvironmentCredential: Authentication failed: AADSTS700016: Application with identifier 'YOUR_APPLICATION_ID' was not found in the directory 'YOUR_ORGANIZATION_ON_AZURE'. ` Cette erreur est dûe à un CLIENT_ID qui n'est pas valide, ainsi, l'application n'est pas reconnue par les services Azure.
+Pour contourner ce problème, on peut ajouter une exception au proxy à cette URL :  
+```py
+https://management.azure.com/subscriptions/id_sub/resourceGroups/nom_resource_group/providers/Microsoft.Network/applicationGateways/id_app_gateway?api-version=REDACTED
+```
 
-**Erreur de type :** `Attempted credentials: EnvironmentCredential: Authentication failed: Unable to get authority configuration for https://login.microsoftonline.com/AZURE_TENANT_ID. ` Dans ce cas, alors c'est le TENANT_ID renseigné dans le [fichier de configuration](src/config.ini) qui est incorrect.
 
-**Erreur de type :** `Attempted credentials: EnvironmentCredential: Authentication failed: AADSTS7000215: Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app 'AZURE_CLIENT_ID'. `Dans ce cas c'est le secret de l'application qui est incorrect, problème qui vient encore de la configuration du [fichier de configuration](src/config.ini).
+### Environment Credntial
+
+**Erreur de type :** `Attempted credentials: EnvironmentCredential: Authentication failed: AADSTS700016: Application with identifier 'YOUR_APPLICATION_ID' was not found in the directory 'YOUR_ORGANIZATION_ON_AZURE'. `   
+Cette erreur est dûe à un CLIENT_ID qui n'est pas valide, ainsi, l'application n'est pas reconnue par les services Azure.
+
+**Erreur de type :** `Attempted credentials: EnvironmentCredential: Authentication failed: Unable to get authority configuration for https://login.microsoftonline.com/AZURE_TENANT_ID. `  
+Dans ce cas, alors c'est le TENANT_ID renseigné dans le [fichier de configuration](src/config.ini) qui est incorrect.
+
+**Erreur de type :** `Attempted credentials: EnvironmentCredential: Authentication failed: AADSTS7000215: Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app 'AZURE_CLIENT_ID'.`  
+Dans ce cas c'est le secret de l'application qui est incorrect, problème qui vient encore de la configuration du [fichier de configuration](src/config.ini).
