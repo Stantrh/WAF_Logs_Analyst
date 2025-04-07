@@ -1,0 +1,1173 @@
+2025-04-07 14:27:31,743 - INFO - Environment is configured for ClientSecretCredential
+2025-04-07 14:27:31,747 - INFO - ManagedIdentityCredential will use IMDS with client_id: 171dbcfb-54e3-4baf-87cb-e8102333dd39
+2025-04-07 14:27:31,750 - DEBUG - Initializing with Entra authority: https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316
+2025-04-07 14:27:31,750 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+No body was attached to the request
+2025-04-07 14:27:31,753 - DEBUG - Starting new HTTPS connection (1): login.microsoftonline.com:443
+2025-04-07 14:27:31,889 - DEBUG - https://login.microsoftonline.com:443 "GET /450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration HTTP/1.1" 200 1753
+2025-04-07 14:27:31,890 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': '9159ce49-ef5f-4486-a5fd-0087d3866d00'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:27:29 GMT'
+    'Content-Length': '1753'
+2025-04-07 14:27:31,891 - DEBUG - openid_config("https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration") = {'token_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token', 'token_endpoint_auth_methods_supported': ['client_secret_post', 'private_key_jwt', 'client_secret_basic'], 'jwks_uri': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/discovery/v2.0/keys', 'response_modes_supported': ['query', 'fragment', 'form_post'], 'subject_types_supported': ['pairwise'], 'id_token_signing_alg_values_supported': ['RS256'], 'response_types_supported': ['code', 'id_token', 'code id_token', 'id_token token'], 'scopes_supported': ['openid', 'profile', 'email', 'offline_access'], 'issuer': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0', 'request_uri_parameter_supported': False, 'userinfo_endpoint': 'https://graph.microsoft.com/oidc/userinfo', 'authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/authorize', 'device_authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/devicecode', 'http_logout_supported': True, 'frontchannel_logout_supported': True, 'end_session_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/logout', 'claims_supported': ['sub', 'iss', 'cloud_instance_name', 'cloud_instance_host_name', 'cloud_graph_host_name', 'msgraph_host', 'aud', 'exp', 'iat', 'auth_time', 'acr', 'nonce', 'preferred_username', 'name', 'tid', 'ver', 'at_hash', 'c_hash', 'email'], 'kerberos_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/kerberos', 'tenant_region_scope': 'EU', 'cloud_instance_name': 'microsoftonline.com', 'cloud_graph_host_name': 'graph.windows.net', 'msgraph_host': 'graph.microsoft.com', 'rbac_url': 'https://pas.windows.net'}
+2025-04-07 14:27:31,891 - DEBUG - Broker enabled? None
+2025-04-07 14:27:31,891 - DEBUG - Region to be used: None
+2025-04-07 14:27:31,896 - DEBUG - Generate or reuse correlation_id: 9be4cffa-585f-45a8-9f14-c5430f57e9a3
+2025-04-07 14:27:31,896 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+A body is sent with the request
+2025-04-07 14:27:32,009 - DEBUG - https://login.microsoftonline.com:443 "POST /450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token HTTP/1.1" 200 1396
+2025-04-07 14:27:32,010 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': 'df65a0c7-ae47-4b3b-af91-c1b2b6097e00'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:27:29 GMT'
+    'Content-Length': '1396'
+2025-04-07 14:27:32,010 - DEBUG - event={
+    "client_id": "171dbcfb-54e3-4baf-87cb-e8102333dd39",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://management.azure.com/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 3599,
+        "ext_expires_in": 3599,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://management.azure.com/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token"
+}
+2025-04-07 14:27:32,010 - DEBUG - ClientSecretCredential.get_token_info succeeded
+2025-04-07 14:27:32,010 - DEBUG - EnvironmentCredential.get_token_info succeeded
+2025-04-07 14:27:32,010 - DEBUG - [Authenticated account] Client ID: 171dbcfb-54e3-4baf-87cb-e8102333dd39. Tenant ID: 450c4b37-1c5f-4415-a413-c83c13fd5316. User Principal Name: unavailableUpn. Object ID (user): f636e8e0-fe24-4235-93e5-45c530205fec
+2025-04-07 14:27:32,010 - INFO - DefaultAzureCredential acquired a token from EnvironmentCredential
+2025-04-07 14:27:32,010 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'ad5ee4aa-13ab-11f0-84a5-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:27:32,011 - DEBUG - Starting new HTTPS connection (1): management.azure.com:443
+2025-04-07 14:27:32,526 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=2024-05-01 HTTP/1.1" 200 45464
+2025-04-07 14:27:32,553 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '45464'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"0a53e5df-3e3a-4413-a2c9-95b2c156f14c"'
+    'x-ms-request-id': 'f1a20b1f-1af1-4cbd-b20c-4bceb704809f'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 3599224C7573440793DDE56A0CD3868D Ref B: VIEEDGE2006 Ref C: 2025-04-07T12:27:30Z'
+    'Date': 'Mon, 07 Apr 2025 12:27:30 GMT'
+2025-04-07 14:27:32,557 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'adda2c68-13ab-11f0-9423-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:27:32,683 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=2024-05-01 HTTP/1.1" 200 9665
+2025-04-07 14:27:32,683 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '9665'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"60956602-2e86-4341-bbd5-92647dbdb41d"'
+    'x-ms-request-id': '0b725693-3beb-4106-ba15-6dad4d8141b4'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '248'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 668C3CE6A15C47DFA20F1A596E43AC38 Ref B: VIEEDGE2006 Ref C: 2025-04-07T12:27:31Z'
+    'Date': 'Mon, 07 Apr 2025 12:27:30 GMT'
+2025-04-07 14:27:35,858 - INFO - Démarrage de la récupération des logs Azure.
+2025-04-07 14:27:44,484 - INFO - Exécution de la requête aux services Azure..
+2025-04-07 14:27:44,484 - ERROR - Erreur de connexion à Azure: name 'os' is not defined
+2025-04-07 14:28:43,102 - INFO - Environment is configured for ClientSecretCredential
+2025-04-07 14:28:43,107 - INFO - ManagedIdentityCredential will use IMDS with client_id: 171dbcfb-54e3-4baf-87cb-e8102333dd39
+2025-04-07 14:28:43,109 - DEBUG - Initializing with Entra authority: https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316
+2025-04-07 14:28:43,109 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+No body was attached to the request
+2025-04-07 14:28:43,113 - DEBUG - Starting new HTTPS connection (1): login.microsoftonline.com:443
+2025-04-07 14:28:43,257 - DEBUG - https://login.microsoftonline.com:443 "GET /450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration HTTP/1.1" 200 1753
+2025-04-07 14:28:43,258 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': '22517181-6432-4d7c-8fc1-8ede90b77500'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:28:41 GMT'
+    'Content-Length': '1753'
+2025-04-07 14:28:43,260 - DEBUG - openid_config("https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration") = {'token_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token', 'token_endpoint_auth_methods_supported': ['client_secret_post', 'private_key_jwt', 'client_secret_basic'], 'jwks_uri': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/discovery/v2.0/keys', 'response_modes_supported': ['query', 'fragment', 'form_post'], 'subject_types_supported': ['pairwise'], 'id_token_signing_alg_values_supported': ['RS256'], 'response_types_supported': ['code', 'id_token', 'code id_token', 'id_token token'], 'scopes_supported': ['openid', 'profile', 'email', 'offline_access'], 'issuer': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0', 'request_uri_parameter_supported': False, 'userinfo_endpoint': 'https://graph.microsoft.com/oidc/userinfo', 'authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/authorize', 'device_authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/devicecode', 'http_logout_supported': True, 'frontchannel_logout_supported': True, 'end_session_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/logout', 'claims_supported': ['sub', 'iss', 'cloud_instance_name', 'cloud_instance_host_name', 'cloud_graph_host_name', 'msgraph_host', 'aud', 'exp', 'iat', 'auth_time', 'acr', 'nonce', 'preferred_username', 'name', 'tid', 'ver', 'at_hash', 'c_hash', 'email'], 'kerberos_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/kerberos', 'tenant_region_scope': 'EU', 'cloud_instance_name': 'microsoftonline.com', 'cloud_graph_host_name': 'graph.windows.net', 'msgraph_host': 'graph.microsoft.com', 'rbac_url': 'https://pas.windows.net'}
+2025-04-07 14:28:43,260 - DEBUG - Broker enabled? None
+2025-04-07 14:28:43,260 - DEBUG - Region to be used: None
+2025-04-07 14:28:43,265 - DEBUG - Generate or reuse correlation_id: accde1a8-0b18-47b3-8cda-aed283879805
+2025-04-07 14:28:43,265 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+A body is sent with the request
+2025-04-07 14:28:43,378 - DEBUG - https://login.microsoftonline.com:443 "POST /450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token HTTP/1.1" 200 1397
+2025-04-07 14:28:43,379 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': '07e9aed9-06ba-4431-bd25-312b15077900'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:28:41 GMT'
+    'Content-Length': '1397'
+2025-04-07 14:28:43,379 - DEBUG - event={
+    "client_id": "171dbcfb-54e3-4baf-87cb-e8102333dd39",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://management.azure.com/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 3599,
+        "ext_expires_in": 3599,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://management.azure.com/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token"
+}
+2025-04-07 14:28:43,379 - DEBUG - ClientSecretCredential.get_token_info succeeded
+2025-04-07 14:28:43,379 - DEBUG - EnvironmentCredential.get_token_info succeeded
+2025-04-07 14:28:43,379 - DEBUG - [Authenticated account] Client ID: 171dbcfb-54e3-4baf-87cb-e8102333dd39. Tenant ID: 450c4b37-1c5f-4415-a413-c83c13fd5316. User Principal Name: unavailableUpn. Object ID (user): f636e8e0-fe24-4235-93e5-45c530205fec
+2025-04-07 14:28:43,379 - INFO - DefaultAzureCredential acquired a token from EnvironmentCredential
+2025-04-07 14:28:43,379 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'd7e77b9f-13ab-11f0-9ddb-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:28:43,380 - DEBUG - Starting new HTTPS connection (1): management.azure.com:443
+2025-04-07 14:28:43,912 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=2024-05-01 HTTP/1.1" 200 45464
+2025-04-07 14:28:43,940 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '45464'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"0a53e5df-3e3a-4413-a2c9-95b2c156f14c"'
+    'x-ms-request-id': '020ca401-1ffd-4d48-8b0a-eff91d107eec'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 5B558F52F9024BDCA741AC600B99D1DF Ref B: AMS231032607051 Ref C: 2025-04-07T12:28:42Z'
+    'Date': 'Mon, 07 Apr 2025 12:28:42 GMT'
+2025-04-07 14:28:43,944 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'd866ef5e-13ab-11f0-98f9-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:28:44,075 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=2024-05-01 HTTP/1.1" 200 9665
+2025-04-07 14:28:44,076 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '9665'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"60956602-2e86-4341-bbd5-92647dbdb41d"'
+    'x-ms-request-id': '449da769-affa-412d-8757-1174c5f2bdfd'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 9D70FEFC8EB44170A48C5A85090DA28E Ref B: AMS231032607051 Ref C: 2025-04-07T12:28:42Z'
+    'Date': 'Mon, 07 Apr 2025 12:28:42 GMT'
+2025-04-07 14:28:45,100 - INFO - Démarrage de la récupération des logs Azure.
+2025-04-07 14:28:51,326 - INFO - Exécution de la requête aux services Azure..
+2025-04-07 14:28:51,326 - ERROR - Erreur de connexion à Azure: name 'os' is not defined
+2025-04-07 14:29:20,227 - INFO - Environment is configured for ClientSecretCredential
+2025-04-07 14:29:20,231 - INFO - ManagedIdentityCredential will use IMDS with client_id: 171dbcfb-54e3-4baf-87cb-e8102333dd39
+2025-04-07 14:29:20,233 - DEBUG - Initializing with Entra authority: https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316
+2025-04-07 14:29:20,233 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+No body was attached to the request
+2025-04-07 14:29:20,236 - DEBUG - Starting new HTTPS connection (1): login.microsoftonline.com:443
+2025-04-07 14:29:20,352 - DEBUG - https://login.microsoftonline.com:443 "GET /450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration HTTP/1.1" 200 1753
+2025-04-07 14:29:20,353 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': 'dc14bb06-1ff9-44c4-9802-fdce237f7e00'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:29:18 GMT'
+    'Content-Length': '1753'
+2025-04-07 14:29:20,355 - DEBUG - openid_config("https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration") = {'token_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token', 'token_endpoint_auth_methods_supported': ['client_secret_post', 'private_key_jwt', 'client_secret_basic'], 'jwks_uri': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/discovery/v2.0/keys', 'response_modes_supported': ['query', 'fragment', 'form_post'], 'subject_types_supported': ['pairwise'], 'id_token_signing_alg_values_supported': ['RS256'], 'response_types_supported': ['code', 'id_token', 'code id_token', 'id_token token'], 'scopes_supported': ['openid', 'profile', 'email', 'offline_access'], 'issuer': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0', 'request_uri_parameter_supported': False, 'userinfo_endpoint': 'https://graph.microsoft.com/oidc/userinfo', 'authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/authorize', 'device_authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/devicecode', 'http_logout_supported': True, 'frontchannel_logout_supported': True, 'end_session_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/logout', 'claims_supported': ['sub', 'iss', 'cloud_instance_name', 'cloud_instance_host_name', 'cloud_graph_host_name', 'msgraph_host', 'aud', 'exp', 'iat', 'auth_time', 'acr', 'nonce', 'preferred_username', 'name', 'tid', 'ver', 'at_hash', 'c_hash', 'email'], 'kerberos_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/kerberos', 'tenant_region_scope': 'EU', 'cloud_instance_name': 'microsoftonline.com', 'cloud_graph_host_name': 'graph.windows.net', 'msgraph_host': 'graph.microsoft.com', 'rbac_url': 'https://pas.windows.net'}
+2025-04-07 14:29:20,355 - DEBUG - Broker enabled? None
+2025-04-07 14:29:20,355 - DEBUG - Region to be used: None
+2025-04-07 14:29:20,360 - DEBUG - Generate or reuse correlation_id: 71f3d6f0-8c6d-4f64-9138-5f03062ff15f
+2025-04-07 14:29:20,360 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+A body is sent with the request
+2025-04-07 14:29:20,472 - DEBUG - https://login.microsoftonline.com:443 "POST /450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token HTTP/1.1" 200 1397
+2025-04-07 14:29:20,473 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': 'fb225db8-2182-4ce6-bbd8-15b6ed3c5d00'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:29:19 GMT'
+    'Content-Length': '1397'
+2025-04-07 14:29:20,473 - DEBUG - event={
+    "client_id": "171dbcfb-54e3-4baf-87cb-e8102333dd39",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://management.azure.com/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 3599,
+        "ext_expires_in": 3599,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://management.azure.com/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token"
+}
+2025-04-07 14:29:20,474 - DEBUG - ClientSecretCredential.get_token_info succeeded
+2025-04-07 14:29:20,474 - DEBUG - EnvironmentCredential.get_token_info succeeded
+2025-04-07 14:29:20,474 - DEBUG - [Authenticated account] Client ID: 171dbcfb-54e3-4baf-87cb-e8102333dd39. Tenant ID: 450c4b37-1c5f-4415-a413-c83c13fd5316. User Principal Name: unavailableUpn. Object ID (user): f636e8e0-fe24-4235-93e5-45c530205fec
+2025-04-07 14:29:20,474 - INFO - DefaultAzureCredential acquired a token from EnvironmentCredential
+2025-04-07 14:29:20,474 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'ee0821c3-13ab-11f0-b623-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:29:20,475 - DEBUG - Starting new HTTPS connection (1): management.azure.com:443
+2025-04-07 14:29:20,719 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=2024-05-01 HTTP/1.1" 200 45464
+2025-04-07 14:29:20,749 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '45464'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"0a53e5df-3e3a-4413-a2c9-95b2c156f14c"'
+    'x-ms-request-id': '03efcbd0-4546-4cbf-ad6d-bd6bad8aac12'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 07634E75C8D14180B38FD2FBE0571524 Ref B: AMS231020512023 Ref C: 2025-04-07T12:29:19Z'
+    'Date': 'Mon, 07 Apr 2025 12:29:19 GMT'
+2025-04-07 14:29:20,754 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'ee57ae5f-13ab-11f0-99b4-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:29:20,925 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=2024-05-01 HTTP/1.1" 200 9665
+2025-04-07 14:29:20,926 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '9665'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"60956602-2e86-4341-bbd5-92647dbdb41d"'
+    'x-ms-request-id': '731ca08c-657c-4ff3-a3be-5f60f923b0ec'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: CE07184E703949DCB342CC62B47442BE Ref B: AMS231020512023 Ref C: 2025-04-07T12:29:19Z'
+    'Date': 'Mon, 07 Apr 2025 12:29:19 GMT'
+2025-04-07 14:29:25,682 - INFO - Démarrage de la récupération des logs Azure.
+2025-04-07 14:29:32,763 - INFO - Exécution de la requête aux services Azure..
+2025-04-07 14:29:32,764 - ERROR - Erreur de connexion à Azure: name 'os' is not defined
+2025-04-07 14:30:19,066 - INFO - Environment is configured for ClientSecretCredential
+2025-04-07 14:30:19,070 - INFO - ManagedIdentityCredential will use IMDS with client_id: 171dbcfb-54e3-4baf-87cb-e8102333dd39
+2025-04-07 14:30:19,072 - DEBUG - Initializing with Entra authority: https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316
+2025-04-07 14:30:19,072 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+No body was attached to the request
+2025-04-07 14:30:19,075 - DEBUG - Starting new HTTPS connection (1): login.microsoftonline.com:443
+2025-04-07 14:30:19,375 - DEBUG - https://login.microsoftonline.com:443 "GET /450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration HTTP/1.1" 200 1753
+2025-04-07 14:30:19,376 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': '10bde4b1-89ae-45cd-bbee-50877e777600'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:30:17 GMT'
+    'Content-Length': '1753'
+2025-04-07 14:30:19,378 - DEBUG - openid_config("https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration") = {'token_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token', 'token_endpoint_auth_methods_supported': ['client_secret_post', 'private_key_jwt', 'client_secret_basic'], 'jwks_uri': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/discovery/v2.0/keys', 'response_modes_supported': ['query', 'fragment', 'form_post'], 'subject_types_supported': ['pairwise'], 'id_token_signing_alg_values_supported': ['RS256'], 'response_types_supported': ['code', 'id_token', 'code id_token', 'id_token token'], 'scopes_supported': ['openid', 'profile', 'email', 'offline_access'], 'issuer': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0', 'request_uri_parameter_supported': False, 'userinfo_endpoint': 'https://graph.microsoft.com/oidc/userinfo', 'authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/authorize', 'device_authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/devicecode', 'http_logout_supported': True, 'frontchannel_logout_supported': True, 'end_session_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/logout', 'claims_supported': ['sub', 'iss', 'cloud_instance_name', 'cloud_instance_host_name', 'cloud_graph_host_name', 'msgraph_host', 'aud', 'exp', 'iat', 'auth_time', 'acr', 'nonce', 'preferred_username', 'name', 'tid', 'ver', 'at_hash', 'c_hash', 'email'], 'kerberos_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/kerberos', 'tenant_region_scope': 'EU', 'cloud_instance_name': 'microsoftonline.com', 'cloud_graph_host_name': 'graph.windows.net', 'msgraph_host': 'graph.microsoft.com', 'rbac_url': 'https://pas.windows.net'}
+2025-04-07 14:30:19,378 - DEBUG - Broker enabled? None
+2025-04-07 14:30:19,378 - DEBUG - Region to be used: None
+2025-04-07 14:30:19,383 - DEBUG - Generate or reuse correlation_id: 89c28a4e-8b0b-4fc8-b91b-bdc2b739d604
+2025-04-07 14:30:19,384 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+A body is sent with the request
+2025-04-07 14:30:19,481 - DEBUG - https://login.microsoftonline.com:443 "POST /450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token HTTP/1.1" 200 1397
+2025-04-07 14:30:19,482 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': 'b927d4c1-0071-4f4e-a1d5-04ce35277f00'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:30:17 GMT'
+    'Content-Length': '1397'
+2025-04-07 14:30:19,482 - DEBUG - event={
+    "client_id": "171dbcfb-54e3-4baf-87cb-e8102333dd39",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://management.azure.com/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 3599,
+        "ext_expires_in": 3599,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://management.azure.com/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token"
+}
+2025-04-07 14:30:19,482 - DEBUG - ClientSecretCredential.get_token_info succeeded
+2025-04-07 14:30:19,482 - DEBUG - EnvironmentCredential.get_token_info succeeded
+2025-04-07 14:30:19,482 - DEBUG - [Authenticated account] Client ID: 171dbcfb-54e3-4baf-87cb-e8102333dd39. Tenant ID: 450c4b37-1c5f-4415-a413-c83c13fd5316. User Principal Name: unavailableUpn. Object ID (user): f636e8e0-fe24-4235-93e5-45c530205fec
+2025-04-07 14:30:19,483 - INFO - DefaultAzureCredential acquired a token from EnvironmentCredential
+2025-04-07 14:30:19,483 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '111a40e9-13ac-11f0-a878-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:30:19,484 - DEBUG - Starting new HTTPS connection (1): management.azure.com:443
+2025-04-07 14:30:20,114 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=2024-05-01 HTTP/1.1" 200 45464
+2025-04-07 14:30:20,141 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '45464'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"0a53e5df-3e3a-4413-a2c9-95b2c156f14c"'
+    'x-ms-request-id': '9d73b381-9390-4c84-805a-626edc9cc360'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: A94A238521AC4B4A85553795CC0F800A Ref B: AMS231020615011 Ref C: 2025-04-07T12:30:18Z'
+    'Date': 'Mon, 07 Apr 2025 12:30:17 GMT'
+2025-04-07 14:30:20,146 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '11be26e4-13ac-11f0-82d3-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:30:20,350 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=2024-05-01 HTTP/1.1" 200 9665
+2025-04-07 14:30:20,351 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '9665'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"60956602-2e86-4341-bbd5-92647dbdb41d"'
+    'x-ms-request-id': '1af9d17d-9590-4066-8f29-6dee33907c1d'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '248'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 7CF1B88D81474ACF99EA87119BF5A4B2 Ref B: AMS231020615011 Ref C: 2025-04-07T12:30:18Z'
+    'Date': 'Mon, 07 Apr 2025 12:30:18 GMT'
+2025-04-07 14:30:21,355 - INFO - Démarrage de la récupération des logs Azure.
+2025-04-07 14:30:27,306 - INFO - Exécution de la requête aux services Azure..
+2025-04-07 14:30:27,307 - DEBUG - Generate or reuse correlation_id: 0434e307-91d7-4a7a-8a99-5207cbc709e5
+2025-04-07 14:30:27,308 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+A body is sent with the request
+2025-04-07 14:30:27,412 - DEBUG - https://login.microsoftonline.com:443 "POST /450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token HTTP/1.1" 200 1367
+2025-04-07 14:30:27,413 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': '24d7dcf8-56cd-41c8-bda1-69463eec5200'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:30:25 GMT'
+    'Content-Length': '1367'
+2025-04-07 14:30:27,413 - DEBUG - event={
+    "client_id": "171dbcfb-54e3-4baf-87cb-e8102333dd39",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://api.loganalytics.io/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 3599,
+        "ext_expires_in": 3599,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://api.loganalytics.io/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token"
+}
+2025-04-07 14:30:27,413 - INFO - ClientSecretCredential.get_token_info succeeded
+2025-04-07 14:30:27,413 - INFO - EnvironmentCredential.get_token_info succeeded
+2025-04-07 14:30:27,413 - DEBUG - [Authenticated account] Client ID: 171dbcfb-54e3-4baf-87cb-e8102333dd39. Tenant ID: 450c4b37-1c5f-4415-a413-c83c13fd5316. User Principal Name: unavailableUpn. Object ID (user): f636e8e0-fe24-4235-93e5-45c530205fec
+2025-04-07 14:30:27,413 - INFO - DefaultAzureCredential acquired a token from EnvironmentCredential
+2025-04-07 14:30:27,414 - INFO - Request URL: 'https://api.loganalytics.io/v1/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag/query'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '311'
+    'Prefer': 'REDACTED'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '1602def4-13ac-11f0-b5fb-700894d99844'
+    'User-Agent': 'azsdk-python-monitor-query/unknown Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-07 14:30:27,414 - DEBUG - Starting new HTTPS connection (1): api.loganalytics.io:443
+2025-04-07 14:30:27,495 - ERROR - Erreur de connexion à Azure: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)
+2025-04-07 14:42:43,408 - INFO - Environment is configured for ClientSecretCredential
+2025-04-07 14:42:43,413 - INFO - ManagedIdentityCredential will use IMDS with client_id: 171dbcfb-54e3-4baf-87cb-e8102333dd39
+2025-04-07 14:42:43,416 - DEBUG - Initializing with Entra authority: https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316
+2025-04-07 14:42:43,416 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+No body was attached to the request
+2025-04-07 14:42:43,421 - DEBUG - Starting new HTTPS connection (1): login.microsoftonline.com:443
+2025-04-07 14:42:43,563 - DEBUG - https://login.microsoftonline.com:443 "GET /450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration HTTP/1.1" 200 1753
+2025-04-07 14:42:43,564 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': 'fa525013-fa0f-4325-92a7-a39006348700'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:42:41 GMT'
+    'Content-Length': '1753'
+2025-04-07 14:42:43,565 - DEBUG - openid_config("https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration") = {'token_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token', 'token_endpoint_auth_methods_supported': ['client_secret_post', 'private_key_jwt', 'client_secret_basic'], 'jwks_uri': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/discovery/v2.0/keys', 'response_modes_supported': ['query', 'fragment', 'form_post'], 'subject_types_supported': ['pairwise'], 'id_token_signing_alg_values_supported': ['RS256'], 'response_types_supported': ['code', 'id_token', 'code id_token', 'id_token token'], 'scopes_supported': ['openid', 'profile', 'email', 'offline_access'], 'issuer': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0', 'request_uri_parameter_supported': False, 'userinfo_endpoint': 'https://graph.microsoft.com/oidc/userinfo', 'authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/authorize', 'device_authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/devicecode', 'http_logout_supported': True, 'frontchannel_logout_supported': True, 'end_session_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/logout', 'claims_supported': ['sub', 'iss', 'cloud_instance_name', 'cloud_instance_host_name', 'cloud_graph_host_name', 'msgraph_host', 'aud', 'exp', 'iat', 'auth_time', 'acr', 'nonce', 'preferred_username', 'name', 'tid', 'ver', 'at_hash', 'c_hash', 'email'], 'kerberos_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/kerberos', 'tenant_region_scope': 'EU', 'cloud_instance_name': 'microsoftonline.com', 'cloud_graph_host_name': 'graph.windows.net', 'msgraph_host': 'graph.microsoft.com', 'rbac_url': 'https://pas.windows.net'}
+2025-04-07 14:42:43,565 - DEBUG - Broker enabled? None
+2025-04-07 14:42:43,565 - DEBUG - Region to be used: None
+2025-04-07 14:42:43,569 - DEBUG - Generate or reuse correlation_id: 68ee5236-42c3-4ab9-b7c3-89f9caccd240
+2025-04-07 14:42:43,570 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+A body is sent with the request
+2025-04-07 14:42:43,688 - DEBUG - https://login.microsoftonline.com:443 "POST /450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token HTTP/1.1" 200 1397
+2025-04-07 14:42:43,689 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': 'd0ad57fe-e168-4da9-a5ed-841820f57000'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:42:41 GMT'
+    'Content-Length': '1397'
+2025-04-07 14:42:43,689 - DEBUG - event={
+    "client_id": "171dbcfb-54e3-4baf-87cb-e8102333dd39",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://management.azure.com/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 3599,
+        "ext_expires_in": 3599,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://management.azure.com/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token"
+}
+2025-04-07 14:42:43,689 - DEBUG - ClientSecretCredential.get_token_info succeeded
+2025-04-07 14:42:43,689 - DEBUG - EnvironmentCredential.get_token_info succeeded
+2025-04-07 14:42:43,689 - DEBUG - [Authenticated account] Client ID: 171dbcfb-54e3-4baf-87cb-e8102333dd39. Tenant ID: 450c4b37-1c5f-4415-a413-c83c13fd5316. User Principal Name: unavailableUpn. Object ID (user): f636e8e0-fe24-4235-93e5-45c530205fec
+2025-04-07 14:42:43,689 - INFO - DefaultAzureCredential acquired a token from EnvironmentCredential
+2025-04-07 14:42:43,690 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'ccc41ca4-13ad-11f0-8242-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:42:43,691 - DEBUG - Starting new HTTPS connection (1): management.azure.com:443
+2025-04-07 14:42:43,960 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=2024-05-01 HTTP/1.1" 200 45464
+2025-04-07 14:42:43,988 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '45464'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"0a53e5df-3e3a-4413-a2c9-95b2c156f14c"'
+    'x-ms-request-id': '62ce0e1b-49b8-47f0-9f7f-6541c8390847'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 3C8302EEC9A947BC93A89D8F82F7C49C Ref B: VIEEDGE2105 Ref C: 2025-04-07T12:42:42Z'
+    'Date': 'Mon, 07 Apr 2025 12:42:42 GMT'
+2025-04-07 14:42:43,993 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'cd1c3189-13ad-11f0-8605-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:42:44,418 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=2024-05-01 HTTP/1.1" 200 9665
+2025-04-07 14:42:44,418 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '9665'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"60956602-2e86-4341-bbd5-92647dbdb41d"'
+    'x-ms-request-id': 'cd5dd285-a700-41a8-bc27-9a4460f9fa48'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: F8C180E5D92843A28CE6621E52369BDE Ref B: VIEEDGE2105 Ref C: 2025-04-07T12:42:42Z'
+    'Date': 'Mon, 07 Apr 2025 12:42:42 GMT'
+2025-04-07 14:42:47,501 - INFO - Démarrage de la récupération des logs Azure.
+2025-04-07 14:42:55,463 - INFO - Exécution de la requête aux services Azure..
+2025-04-07 14:42:55,464 - DEBUG - Generate or reuse correlation_id: 2b2e3002-e946-4168-8f43-d7cbbd7d8298
+2025-04-07 14:42:55,464 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+A body is sent with the request
+2025-04-07 14:42:55,578 - DEBUG - https://login.microsoftonline.com:443 "POST /450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token HTTP/1.1" 200 1367
+2025-04-07 14:42:55,579 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': 'fa525013-fa0f-4325-92a7-a3902a368700'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:42:53 GMT'
+    'Content-Length': '1367'
+2025-04-07 14:42:55,579 - DEBUG - event={
+    "client_id": "171dbcfb-54e3-4baf-87cb-e8102333dd39",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://api.loganalytics.io/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 3599,
+        "ext_expires_in": 3599,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://api.loganalytics.io/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token"
+}
+2025-04-07 14:42:55,579 - INFO - ClientSecretCredential.get_token_info succeeded
+2025-04-07 14:42:55,579 - INFO - EnvironmentCredential.get_token_info succeeded
+2025-04-07 14:42:55,579 - DEBUG - [Authenticated account] Client ID: 171dbcfb-54e3-4baf-87cb-e8102333dd39. Tenant ID: 450c4b37-1c5f-4415-a413-c83c13fd5316. User Principal Name: unavailableUpn. Object ID (user): f636e8e0-fe24-4235-93e5-45c530205fec
+2025-04-07 14:42:55,579 - INFO - DefaultAzureCredential acquired a token from EnvironmentCredential
+2025-04-07 14:42:55,580 - INFO - Request URL: 'https://api.loganalytics.io/v1/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag/query'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '311'
+    'Prefer': 'REDACTED'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'd3f27cdb-13ad-11f0-86d6-700894d99844'
+    'User-Agent': 'azsdk-python-monitor-query/unknown Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-07 14:42:55,581 - DEBUG - Starting new HTTPS connection (1): api.loganalytics.io:443
+2025-04-07 14:43:00,093 - DEBUG - https://api.loganalytics.io:443 "POST /v1/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag/query HTTP/1.1" 200 1336589
+2025-04-07 14:43:00,195 - INFO - Response status: 200
+Response headers:
+    'Date': 'Mon, 07 Apr 2025 12:42:58 GMT'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Content-Length': '1336589'
+    'Connection': 'keep-alive'
+    'via': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Expose-Headers': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+2025-04-07 14:43:00,218 - INFO - Logs récupérés avec succès.
+2025-04-07 14:45:11,039 - INFO - Démarrage de la récupération des logs Azure.
+2025-04-07 14:45:23,471 - INFO - Exécution de la requête aux services Azure..
+2025-04-07 14:45:23,472 - DEBUG - Cache hit an AT
+2025-04-07 14:45:23,472 - DEBUG - Generate or reuse correlation_id: b99858b5-9ada-4774-a89e-9123144707a8
+2025-04-07 14:45:23,472 - INFO - ClientSecretCredential.get_token_info succeeded
+2025-04-07 14:45:23,472 - INFO - EnvironmentCredential.get_token_info succeeded
+2025-04-07 14:45:23,472 - DEBUG - [Authenticated account] Client ID: 171dbcfb-54e3-4baf-87cb-e8102333dd39. Tenant ID: 450c4b37-1c5f-4415-a413-c83c13fd5316. User Principal Name: unavailableUpn. Object ID (user): f636e8e0-fe24-4235-93e5-45c530205fec
+2025-04-07 14:45:23,472 - INFO - DefaultAzureCredential acquired a token from EnvironmentCredential
+2025-04-07 14:45:23,472 - INFO - Request URL: 'https://api.loganalytics.io/v1/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag/query'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '311'
+    'Prefer': 'REDACTED'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '2c2abcbb-13ae-11f0-97bd-700894d99844'
+    'User-Agent': 'azsdk-python-monitor-query/unknown Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-07 14:45:23,473 - DEBUG - Starting new HTTPS connection (1): api.loganalytics.io:443
+2025-04-07 14:45:24,228 - DEBUG - https://api.loganalytics.io:443 "POST /v1/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag/query HTTP/1.1" 200 1336589
+2025-04-07 14:45:24,344 - INFO - Response status: 200
+Response headers:
+    'Date': 'Mon, 07 Apr 2025 12:45:22 GMT'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Content-Length': '1336589'
+    'Connection': 'keep-alive'
+    'via': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Expose-Headers': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+2025-04-07 14:45:24,359 - INFO - Logs récupérés avec succès.
+2025-04-07 14:52:13,322 - INFO - Environment is configured for ClientSecretCredential
+2025-04-07 14:52:13,327 - INFO - ManagedIdentityCredential will use IMDS with client_id: 171dbcfb-54e3-4baf-87cb-e8102333dd39
+2025-04-07 14:52:13,329 - DEBUG - Initializing with Entra authority: https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316
+2025-04-07 14:52:13,329 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+No body was attached to the request
+2025-04-07 14:52:13,332 - DEBUG - Starting new HTTPS connection (1): login.microsoftonline.com:443
+2025-04-07 14:52:13,473 - DEBUG - https://login.microsoftonline.com:443 "GET /450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration HTTP/1.1" 200 1753
+2025-04-07 14:52:13,474 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': 'a2be9310-6b44-4085-b8f0-0d77b7a47600'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:52:11 GMT'
+    'Content-Length': '1753'
+2025-04-07 14:52:13,476 - DEBUG - openid_config("https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0/.well-known/openid-configuration") = {'token_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token', 'token_endpoint_auth_methods_supported': ['client_secret_post', 'private_key_jwt', 'client_secret_basic'], 'jwks_uri': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/discovery/v2.0/keys', 'response_modes_supported': ['query', 'fragment', 'form_post'], 'subject_types_supported': ['pairwise'], 'id_token_signing_alg_values_supported': ['RS256'], 'response_types_supported': ['code', 'id_token', 'code id_token', 'id_token token'], 'scopes_supported': ['openid', 'profile', 'email', 'offline_access'], 'issuer': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/v2.0', 'request_uri_parameter_supported': False, 'userinfo_endpoint': 'https://graph.microsoft.com/oidc/userinfo', 'authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/authorize', 'device_authorization_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/devicecode', 'http_logout_supported': True, 'frontchannel_logout_supported': True, 'end_session_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/logout', 'claims_supported': ['sub', 'iss', 'cloud_instance_name', 'cloud_instance_host_name', 'cloud_graph_host_name', 'msgraph_host', 'aud', 'exp', 'iat', 'auth_time', 'acr', 'nonce', 'preferred_username', 'name', 'tid', 'ver', 'at_hash', 'c_hash', 'email'], 'kerberos_endpoint': 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/kerberos', 'tenant_region_scope': 'EU', 'cloud_instance_name': 'microsoftonline.com', 'cloud_graph_host_name': 'graph.windows.net', 'msgraph_host': 'graph.microsoft.com', 'rbac_url': 'https://pas.windows.net'}
+2025-04-07 14:52:13,476 - DEBUG - Broker enabled? None
+2025-04-07 14:52:13,476 - DEBUG - Region to be used: None
+2025-04-07 14:52:13,481 - DEBUG - Generate or reuse correlation_id: 21b7327a-28b1-4aaa-b40b-61f53b7339ec
+2025-04-07 14:52:13,482 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+A body is sent with the request
+2025-04-07 14:52:13,573 - DEBUG - https://login.microsoftonline.com:443 "POST /450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token HTTP/1.1" 200 1397
+2025-04-07 14:52:13,574 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': 'd95a5d5c-6763-440b-a4c7-f4bfb8ed1100'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:52:11 GMT'
+    'Content-Length': '1397'
+2025-04-07 14:52:13,575 - DEBUG - event={
+    "client_id": "171dbcfb-54e3-4baf-87cb-e8102333dd39",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://management.azure.com/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 3599,
+        "ext_expires_in": 3599,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://management.azure.com/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token"
+}
+2025-04-07 14:52:13,575 - DEBUG - ClientSecretCredential.get_token_info succeeded
+2025-04-07 14:52:13,575 - DEBUG - EnvironmentCredential.get_token_info succeeded
+2025-04-07 14:52:13,575 - DEBUG - [Authenticated account] Client ID: 171dbcfb-54e3-4baf-87cb-e8102333dd39. Tenant ID: 450c4b37-1c5f-4415-a413-c83c13fd5316. User Principal Name: unavailableUpn. Object ID (user): f636e8e0-fe24-4235-93e5-45c530205fec
+2025-04-07 14:52:13,575 - INFO - DefaultAzureCredential acquired a token from EnvironmentCredential
+2025-04-07 14:52:13,575 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '2075e914-13af-11f0-8bb9-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:52:13,576 - DEBUG - Starting new HTTPS connection (1): management.azure.com:443
+2025-04-07 14:52:13,867 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag?api-version=2024-05-01 HTTP/1.1" 200 45464
+2025-04-07 14:52:13,900 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '45464'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"0a53e5df-3e3a-4413-a2c9-95b2c156f14c"'
+    'x-ms-request-id': '3927fc57-98d7-4fe3-9da2-8490907f1653'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 9878D7A6F8F84821B5EE514FB82234C2 Ref B: VIEEDGE1819 Ref C: 2025-04-07T12:52:12Z'
+    'Date': 'Mon, 07 Apr 2025 12:52:12 GMT'
+2025-04-07 14:52:13,905 - INFO - Request URL: 'https://management.azure.com/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '20cdd5bf-13af-11f0-ab9f-700894d99844'
+    'User-Agent': 'azsdk-python-mgmt-network/28.1.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-07 14:52:14,441 - DEBUG - https://management.azure.com:443 "GET /subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/hub-asteria-dev-wp?api-version=2024-05-01 HTTP/1.1" 200 9665
+2025-04-07 14:52:14,442 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '9665'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'ETag': 'W/"60956602-2e86-4341-bbd5-92647dbdb41d"'
+    'x-ms-request-id': '4e8312e3-c92a-4b61-b9d3-898d8b95bdf7'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-arm-service-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: A8BC58C30EAD4B9C8CB469F4C3B364A2 Ref B: VIEEDGE1819 Ref C: 2025-04-07T12:52:12Z'
+    'Date': 'Mon, 07 Apr 2025 12:52:12 GMT'
+2025-04-07 14:53:11,861 - INFO - Démarrage de la récupération des logs Azure.
+2025-04-07 14:53:19,945 - INFO - Exécution de la requête aux services Azure..
+2025-04-07 14:53:19,945 - DEBUG - Generate or reuse correlation_id: fc3eb229-2beb-4f06-a1d7-19a3d420616c
+2025-04-07 14:53:19,946 - INFO - Request URL: 'https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.21.0 Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+A body is sent with the request
+2025-04-07 14:53:20,051 - DEBUG - https://login.microsoftonline.com:443 "POST /450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token HTTP/1.1" 200 1367
+2025-04-07 14:53:20,052 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': '08e2f4dc-1092-4510-a62f-fdbab4067200'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Mon, 07 Apr 2025 12:53:17 GMT'
+    'Content-Length': '1367'
+2025-04-07 14:53:20,052 - DEBUG - event={
+    "client_id": "171dbcfb-54e3-4baf-87cb-e8102333dd39",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://api.loganalytics.io/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 3599,
+        "ext_expires_in": 3599,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://api.loganalytics.io/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/450c4b37-1c5f-4415-a413-c83c13fd5316/oauth2/v2.0/token"
+}
+2025-04-07 14:53:20,052 - INFO - ClientSecretCredential.get_token_info succeeded
+2025-04-07 14:53:20,052 - INFO - EnvironmentCredential.get_token_info succeeded
+2025-04-07 14:53:20,052 - DEBUG - [Authenticated account] Client ID: 171dbcfb-54e3-4baf-87cb-e8102333dd39. Tenant ID: 450c4b37-1c5f-4415-a413-c83c13fd5316. User Principal Name: unavailableUpn. Object ID (user): f636e8e0-fe24-4235-93e5-45c530205fec
+2025-04-07 14:53:20,052 - INFO - DefaultAzureCredential acquired a token from EnvironmentCredential
+2025-04-07 14:53:20,052 - INFO - Request URL: 'https://api.loganalytics.io/v1/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag/query'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '311'
+    'Prefer': 'REDACTED'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '482ad58c-13af-11f0-96d7-700894d99844'
+    'User-Agent': 'azsdk-python-monitor-query/unknown Python/3.13.2 (Windows-11-10.0.22621-SP0)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-07 14:53:20,053 - DEBUG - Starting new HTTPS connection (1): api.loganalytics.io:443
+2025-04-07 14:53:27,673 - DEBUG - https://api.loganalytics.io:443 "POST /v1/subscriptions/e055d284-caf3-4ec1-87e3-75761207b414/resourceGroups/hub-asteria-dev-rg/providers/Microsoft.Network/applicationGateways/asteria-nprod-web-ag/query HTTP/1.1" 200 1336589
+2025-04-07 14:53:27,778 - INFO - Response status: 200
+Response headers:
+    'Date': 'Mon, 07 Apr 2025 12:53:26 GMT'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Content-Length': '1336589'
+    'Connection': 'keep-alive'
+    'via': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Expose-Headers': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+2025-04-07 14:53:27,797 - INFO - Logs récupérés avec succès.

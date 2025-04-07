@@ -119,16 +119,14 @@ def get_waf_infos(credential):
         return waf.policy_settings
     except ClientAuthenticationError as e:
         sys.stderr = sys.__stderr__ # On retablit la sortie par défaut des erreurs
-        # clear_console()
-        # print_center(get_logo())
-        # print_center(LIGHTRED + "Informations remplies dans le config.ini incorrectes. Merci de vérifier !" + RESET_ALL)
-        print("TESTTEST")
-        exit(11)
+        clear_console()
+        print_center(get_logo())
+        print_center(LIGHTRED + "Informations remplies dans le config.ini incorrectes. Merci de vérifier !" + RESET_ALL)
         return None
     except Exception as e:  # Pour les autres exceptions
         sys.stderr = sys.__stderr__
         print("Une erreur s'est produite:", str(e)) 
-        exit(12)
+        return None
     finally: # Au cas où quelque chose d'innatendu se produit
         sys.stderr = sys.__stderr__
 
@@ -201,7 +199,7 @@ def get_azure_logs(credential):
 
     except Exception as e:
         print("Erreur de connexion à Azure..." + str(e))
-        exit(32)
+        time.sleep(3)
         return None
 
 
