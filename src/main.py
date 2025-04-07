@@ -6,6 +6,7 @@ import time
 from io import StringIO
 from datetime import datetime, timezone
 import configparser
+import os
 
 librairies = ["xlsxwriter","colorama", "tqdm", "azure-monitor-query", "azure-identity", "azure.mgmt.network"]
 
@@ -20,7 +21,7 @@ for lib in librairies:
         except subprocess.CalledProcessError:
             print(f"Impossible d'installer {lib}. Vérifier que pip est bien configuré.")
 
-
+### DEPENDANCES AZURE
 import azure.monitor.query
 from xlsxwriter import Workbook # Pour pouvoir écrire dans un fichier xlsx avec du formattage
 from colorama import Fore, Style
@@ -86,6 +87,7 @@ def init_azure_credentials() -> DefaultAzureCredential:
     
     
 
+
 # Permet d'obtenir les infos relatives au WAF (mode, état, etc.)
 def get_waf_infos(credential):
     try:
@@ -117,10 +119,16 @@ def get_waf_infos(credential):
         return waf.policy_settings
     except ClientAuthenticationError as e:
         sys.stderr = sys.__stderr__ # On retablit la sortie par défaut des erreurs
-        clear_console()
-        print_center(get_logo())
-        print_center(LIGHTRED + "Informations remplies dans le config.ini incorrectes. Merci de vérifier !" + RESET_ALL)
+        # clear_console()
+        # print_center(get_logo())
+        # print_center(LIGHTRED + "Informations remplies dans le config.ini incorrectes. Merci de vérifier !" + RESET_ALL)
+        print("TESTTEST")
+        exit(11)
         return None
+    except Exception as e:  # Pour les autres exceptions
+        sys.stderr = sys.__stderr__
+        print("Une erreur s'est produite:", str(e)) 
+        exit(12)
     finally: # Au cas où quelque chose d'innatendu se produit
         sys.stderr = sys.__stderr__
 
@@ -192,7 +200,8 @@ def get_azure_logs(credential):
         return data
 
     except Exception as e:
-        print("Erreur de connexion à Azure...")
+        print("Erreur de connexion à Azure..." + str(e))
+        exit(32)
         return None
 
 
